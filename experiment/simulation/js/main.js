@@ -1,5 +1,9 @@
 //Your JavaScript goes in here
 
+let reac = [],
+  ts = [],
+  prod = [];
+
 const initChart = () => {
   //   const labels = Utils.months({ count: 7 });
   const data = {
@@ -7,7 +11,11 @@ const initChart = () => {
     datasets: [
       {
         // label: "My First Dataset",
-        data: [10, 15, 4],
+        data: [
+          reac.reduce((a, b) => a + b, 0),
+          ts.reduce((a, b) => a + b, 0),
+          prod.reduce((a, b) => a + b, 0),
+        ],
         fill: false,
         borderColor: "rgb(75, 192, 192)",
         tension: 0.3,
@@ -37,6 +45,15 @@ const initChart = () => {
 };
 
 let chart = initChart();
+
+const updateChart = () => {
+  chart.data.datasets[0].data = [
+    reac.reduce((a, b) => a + b, 0),
+    ts.reduce((a, b) => a + b, 0),
+    prod.reduce((a, b) => a + b, 0),
+  ];
+  chart.update();
+};
 
 const generateMolecule = (container_id, molecule_data) => {
   let width = 150;
@@ -73,38 +90,44 @@ generateMolecule("chloromethane-chart", chloromethane);
 const iodide = "1\n \nI  -0.1517900000  -0.2642800000   0.0000000000";
 generateMolecule("iodide-chart", iodide);
 
+const updateVal = (divRef, valueRef, arr, ind) => {
+  divRef.innerHTML = valueRef.value;
+  arr[ind] = parseFloat(valueRef.value);
+  updateChart();
+};
+
 // event listeners
 const chlorideSlider = document.getElementById("chloride-slider");
 const chlorideEnergy = document.getElementById("chloride-energy");
-chlorideEnergy.innerHTML = chlorideSlider.value;
+updateVal(chlorideEnergy, chlorideSlider, reac, 0);
 chlorideSlider.addEventListener("input", () => {
-  chlorideEnergy.innerHTML = chlorideSlider.value;
+  updateVal(chlorideEnergy, chlorideSlider, reac, 0);
 });
 
 const iodomethaneSlider = document.getElementById("iodomethane-slider");
 const iodomethaneEnergy = document.getElementById("iodomethane-energy");
-iodomethaneEnergy.innerHTML = iodomethaneSlider.value;
+updateVal(iodomethaneEnergy, iodomethaneSlider, reac, 1);
 iodomethaneSlider.addEventListener("input", () => {
-  iodomethaneEnergy.innerHTML = iodomethaneSlider.value;
+  updateVal(iodomethaneEnergy, iodomethaneSlider, reac, 1);
 });
 
 const transitionstateSlider = document.getElementById("transitionstate-slider");
 const transitionstateEnergy = document.getElementById("transitionstate-energy");
-transitionstateEnergy.innerHTML = transitionstateSlider.value;
+updateVal(transitionstateEnergy, transitionstateSlider, ts, 0);
 transitionstateSlider.addEventListener("input", () => {
-  transitionstateEnergy.innerHTML = transitionstateSlider.value;
+  updateVal(transitionstateEnergy, transitionstateSlider, ts, 0);
 });
 
 const chloromethaneSlider = document.getElementById("chloromethane-slider");
 const chloromethaneEnergy = document.getElementById("chloromethane-energy");
-chloromethaneEnergy.innerHTML = chloromethaneSlider.value;
+updateVal(chloromethaneEnergy, chloromethaneSlider, prod, 0);
 chloromethaneSlider.addEventListener("input", () => {
-  chloromethaneEnergy.innerHTML = chloromethaneSlider.value;
+  updateVal(chloromethaneEnergy, chloromethaneSlider, prod, 0);
 });
 
 const iodideSlider = document.getElementById("iodide-slider");
 const iodideEnergy = document.getElementById("iodide-energy");
-iodideEnergy.innerHTML = iodideSlider.value;
+updateVal(iodideEnergy, iodideSlider, prod, 1);
 iodideSlider.addEventListener("input", () => {
-  iodideEnergy.innerHTML = iodideSlider.value;
+  updateVal(iodideEnergy, iodideSlider, prod, 1);
 });
