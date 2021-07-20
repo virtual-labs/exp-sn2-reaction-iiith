@@ -32,11 +32,19 @@ const initChart = () => {
         xAxes: [
           {
             offset: true,
+            scaleLabel: {
+              display: true,
+              labelString: "State",
+            },
           },
         ],
         yAxes: [
           {
             offset: true,
+            scaleLabel: {
+              display: true,
+              labelString: "Energy*",
+            },
           },
         ],
       },

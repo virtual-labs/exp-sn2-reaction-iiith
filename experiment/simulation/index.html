@@ -16,11 +16,6 @@
   </head>
   <body>
     <!-- Your code goes here-->
-    <div class="center-content v-margin-bottom">
-      <h4 class="title is-4">
-        Transition State Calculation for a SN2 reaction
-      </h4>
-    </div>
     <div class="columns">
       <div class="column center-content">
         <canvas id="myChart" style="width: 100%; max-width: 700px"></canvas>
@@ -52,10 +47,12 @@
                 />
                 <div class="detail-blocktitle">Gamess Files</div>
                 <div class="detail-buttons">
-                  <button class="v-button" class="chloride-input">Input</button>
-                  <button class="v-button" class="chloride-output">
+                  <a href="./gamess_files/input/chloride.inp" class="v-button">
+                    Input
+                  </a>
+                  <a href="./gamess_files/output/chloride.out" class="v-button">
                     Output
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -82,12 +79,18 @@
                 />
                 <div class="detail-blocktitle">Gamess Files</div>
                 <div class="detail-buttons">
-                  <button class="v-button" class="iodomethane-input">
+                  <a
+                    href="./gamess_files/input/iodomethane.inp"
+                    class="v-button"
+                  >
                     Input
-                  </button>
-                  <button class="v-button" class="iodomethane-output">
+                  </a>
+                  <a
+                    href="./gamess_files/output/iodomethane.out"
+                    class="v-button"
+                  >
                     Output
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -120,12 +123,12 @@
                 />
                 <div class="detail-blocktitle">Gamess Files</div>
                 <div class="detail-buttons">
-                  <button class="v-button" class="transitionstate-input">
+                  <a href="./gamess_files/input/ts.inp" class="v-button">
                     Input
-                  </button>
-                  <button class="v-button" class="transitionstate-output">
+                  </a>
+                  <a href="./gamess_files/output/ts.out" class="v-button">
                     Output
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -158,12 +161,18 @@
                 />
                 <div class="detail-blocktitle">Gamess Files</div>
                 <div class="detail-buttons">
-                  <button class="v-button" class="chloromethane-input">
+                  <a
+                    href="./gamess_files/input/chloromethane.inp"
+                    class="v-button"
+                  >
                     Input
-                  </button>
-                  <button class="v-button" class="chloromethane-output">
+                  </a>
+                  <a
+                    href="./gamess_files/output/chloromethane.out"
+                    class="v-button"
+                  >
                     Output
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -190,36 +199,23 @@
                 />
                 <div class="detail-blocktitle">Gamess Files</div>
                 <div class="detail-buttons">
-                  <button class="v-button" class="iodide-input">Input</button>
-                  <button class="v-button" class="iodide-output">Output</button>
+                  <a href="./gamess_files/input/iodide.inp" class="v-button">
+                    Input
+                  </a>
+                  <a href="./gamess_files/output/iodide.out" class="v-button">
+                    Output
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <!-- <div class="columns">
-      <div class="column center-content">
-        <div class="content-row">
-          <h5 class="title is-5">Reactants:</h5>
-          <div class="content-col">
-            <div>Iodo methane <span id="iodo-methane"></span></div>
-            <input
-              type="range"
-              class="v-slider"
-              min="-180"
-              max="180"
-              step="3"
-              id="iodo-methane-slider"
-            />
+          <div class="detail-row">
+            Note: All the energies here are relative. They do not account for
+            actual values.
           </div>
         </div>
       </div>
-      <div class="column center-content">
-        <canvas id="myChart" style="width: 100%; max-width: 700px"></canvas>
-      </div>
-    </div> -->
+    </div>
     <!-- Add JS at the bottom of HTML file -->
     <script
       type="text/javascript"
