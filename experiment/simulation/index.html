@@ -1,13 +1,248 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
+  <head>
+    <!-- Add CSS at the head of HTML file -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="chemdoodleWeb-9.2.0/ChemDoodleWeb.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.7-b/css/style.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- Your code goes here-->
+    <div class="v-details-container v-margin-bottom">
+      <div class="v-detail-title">Instructions</div>
+      <div class="v-detail-row left-on-mobile">
+        An energy slider and structure of each molecule is present in the
+        following table.
+      </div>
+      <div class="v-detail-row left-on-mobile">
+        Adjust relative energy for each molecule present in Reactants,
+        Transition State and Products, such that you obtain an ideal state vs
+        energy plot.
+      </div>
+      <div class="v-detail-row left-on-mobile">
+        Note down these relative values, and compare it with actual values.
+      </div>
+      <div class="v-detail-row left-on-mobile">
+        Use mouse to interact with molecule, by rotating, and zooming around it.
+      </div>
+      <div class="v-detail-row left-on-mobile">
+        For detailed logs, you can download gamess files and analyze the data.
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column center-content">
+        <canvas id="myChart" style="width: 100%; max-width: 700px"></canvas>
+      </div>
+      <div class="column center-content v-vertical">
+        <!-- Reactants -->
+        <div class="v-details-container">
+          <div class="v-detail-title">Reactants</div>
+          <div class="v-detail-row">
+            <!-- Molecular structure details -->
+            <div class="v-detail-block">
+              <div class="detail-figure">
+                <canvas
+                  id="chloride-chart"
+                  style="width: 100%; max-width: 700px; height: 100%"
+                ></canvas>
+              </div>
+              <div class="detail-data">
+                <div class="detail-blocktitle">Chloride Ion</div>
+                <div>Energy is <span id="chloride-energy">0</span></div>
+                <input
+                  type="range"
+                  class="v-slider"
+                  min="0"
+                  max="1"
+                  step="0.0000000001"
+                  id="chloride-slider"
+                  value="0.2"
+                />
+                <div class="detail-blocktitle">Gamess Files</div>
+                <div class="detail-buttons">
+                  <a href="./gamess_files/input/chloride.inp" class="v-button">
+                    Input
+                  </a>
+                  <a href="./gamess_files/output/chloride.out" class="v-button">
+                    Output
+                  </a>
+                </div>
+              </div>
+            </div>
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
-</body>
+            <!-- Molecular structure details -->
+            <div class="v-detail-block">
+              <div class="detail-figure">
+                <canvas
+                  id="iodomethane-chart"
+                  style="width: 100%; max-width: 700px; height: 100%"
+                ></canvas>
+              </div>
+              <div class="detail-data">
+                <div class="detail-blocktitle">Iodo Methane</div>
+                <div>Energy is <span id="iodomethane-energy">0</span></div>
+                <input
+                  type="range"
+                  class="v-slider"
+                  min="0"
+                  max="1"
+                  step="0.0000000001"
+                  id="iodomethane-slider"
+                  value="0.3"
+                />
+                <div class="detail-blocktitle">Gamess Files</div>
+                <div class="detail-buttons">
+                  <a
+                    href="./gamess_files/input/iodomethane.inp"
+                    class="v-button"
+                  >
+                    Input
+                  </a>
+                  <a
+                    href="./gamess_files/output/iodomethane.out"
+                    class="v-button"
+                  >
+                    Output
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transition state -->
+        <div class="v-details-container">
+          <div class="v-detail-title">Transition state</div>
+          <div class="v-detail-row">
+            <!-- Molecular structure details -->
+            <div class="v-detail-block">
+              <div class="detail-figure">
+                <canvas
+                  id="transitionstate-chart"
+                  style="width: 100%; max-width: 700px; height: 100%"
+                ></canvas>
+              </div>
+              <div class="detail-data">
+                <div class="detail-blocktitle">Transition state</div>
+                <div>Energy is <span id="transitionstate-energy">0</span></div>
+                <input
+                  type="range"
+                  class="v-slider"
+                  min="0"
+                  max="1"
+                  step="0.0000000001"
+                  id="transitionstate-slider"
+                  value="0.7"
+                />
+                <div class="detail-blocktitle">Gamess Files</div>
+                <div class="detail-buttons">
+                  <a href="./gamess_files/input/ts.inp" class="v-button">
+                    Input
+                  </a>
+                  <a href="./gamess_files/output/ts.out" class="v-button">
+                    Output
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Products -->
+        <div class="v-details-container">
+          <div class="v-detail-title">Products</div>
+          <div class="v-detail-row">
+            <!-- Molecular structure details -->
+            <div class="v-detail-block">
+              <div class="detail-figure">
+                <canvas
+                  id="chloromethane-chart"
+                  style="width: 100%; max-width: 700px; height: 100%"
+                ></canvas>
+              </div>
+              <div class="detail-data">
+                <div class="detail-blocktitle">Chloro Methane</div>
+                <div>Energy is <span id="chloromethane-energy">0</span></div>
+                <input
+                  type="range"
+                  class="v-slider"
+                  min="0"
+                  max="1"
+                  step="0.0000000001"
+                  id="chloromethane-slider"
+                  value="0.25"
+                />
+                <div class="detail-blocktitle">Gamess Files</div>
+                <div class="detail-buttons">
+                  <a
+                    href="./gamess_files/input/chloromethane.inp"
+                    class="v-button"
+                  >
+                    Input
+                  </a>
+                  <a
+                    href="./gamess_files/output/chloromethane.out"
+                    class="v-button"
+                  >
+                    Output
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Molecular structure details -->
+            <div class="v-detail-block">
+              <div class="detail-figure">
+                <canvas
+                  id="iodide-chart"
+                  style="width: 100%; max-width: 700px; height: 100%"
+                ></canvas>
+              </div>
+              <div class="detail-data">
+                <div class="detail-blocktitle">Iodide Ion</div>
+                <div>Energy is <span id="iodide-energy">0</span></div>
+                <input
+                  type="range"
+                  class="v-slider"
+                  min="0"
+                  max="1"
+                  step="0.0000000001"
+                  id="iodide-slider"
+                  value="0.10"
+                />
+                <div class="detail-blocktitle">Gamess Files</div>
+                <div class="detail-buttons">
+                  <a href="./gamess_files/input/iodide.inp" class="v-button">
+                    Input
+                  </a>
+                  <a href="./gamess_files/output/iodide.out" class="v-button">
+                    Output
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="v-detail-row">
+            Note: All the energies here are relative. They do not account for
+            actual values.
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add JS at the bottom of HTML file -->
+    <script
+      type="text/javascript"
+      src="chemdoodleWeb-9.2.0/ChemDoodleWeb.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
 </html>

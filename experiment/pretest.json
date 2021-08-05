@@ -1,18 +1,42 @@
 [
-{"question":"This is a Sample Question 1?",
+{"question":"1. What are the intermediatary states in a chemical reaction?",
 "answers":{
-            "a":"answer1",
-            "b":"answer2",
-            "c":"answer3",
-            "d":"answer4"
+            "a":"Nucleophiles",
+            "b":"Transition states",
+            "c":"Catalyst",
+            "d":"Water"
           },
 "correctAnswer":"a"},
-{"question":"This is a Sample Question 2?",
+
+{"question":"2. In which solvent SN2 reaction proceeds well ",
 "answers":{
-            "a":"answer1",
-            "b":"answer2",
-            "c":"answer3",
-            "d":"answer4"
+            "a":"Ethane",
+            "b":"Water",
+            "c":"Benzene",
+            "d":"DMSO"
           },
-"correctAnswer":"c"} 
+"correctAnswer":"c"}, 
+
+{"question":"3. Transition states are very stable ",
+"answers":{
+            "a":"True",
+            "b":"False"
+          },
+"correctAnswer":"a"},
+
+{"question":"4. Is the geometry of the transition state different comapred with reactant  ",
+"answers":{
+            "a":"True",
+            "b":"False"
+          },
+"correctAnswer":"c"},
+
+    {"question":"5. Will the solvent play a role in reaction mechanisms",
+"answers":{
+            "a":"Yes",
+            "b":"No",
+            "c":"Can't say"            
+          },
+"correctAnswer":"a"}
+
 ]
