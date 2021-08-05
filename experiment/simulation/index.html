@@ -10,23 +10,44 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.5-b/css/style.css"
+      href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.7-b/css/style.css"
     />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <!-- Your code goes here-->
+    <div class="v-details-container v-margin-bottom">
+      <div class="v-detail-title">Instructions</div>
+      <div class="v-detail-row left-on-mobile">
+        An energy slider and structure of each molecule is present in the
+        following table.
+      </div>
+      <div class="v-detail-row left-on-mobile">
+        Adjust relative energy for each molecule present in Reactants,
+        Transition State and Products, such that you obtain an ideal state vs
+        energy plot.
+      </div>
+      <div class="v-detail-row left-on-mobile">
+        Note down these relative values, and compare it with actual values.
+      </div>
+      <div class="v-detail-row left-on-mobile">
+        Use mouse to interact with molecule, by rotating, and zooming around it.
+      </div>
+      <div class="v-detail-row left-on-mobile">
+        For detailed logs, you can download gamess files and analyze the data.
+      </div>
+    </div>
     <div class="columns">
       <div class="column center-content">
         <canvas id="myChart" style="width: 100%; max-width: 700px"></canvas>
       </div>
       <div class="column center-content v-vertical">
         <!-- Reactants -->
-        <div class="details-container">
-          <div class="detail-title">Reactants</div>
-          <div class="detail-row">
+        <div class="v-details-container">
+          <div class="v-detail-title">Reactants</div>
+          <div class="v-detail-row">
             <!-- Molecular structure details -->
-            <div class="detail-block">
+            <div class="v-detail-block">
               <div class="detail-figure">
                 <canvas
                   id="chloride-chart"
@@ -58,7 +79,7 @@
             </div>
 
             <!-- Molecular structure details -->
-            <div class="detail-block">
+            <div class="v-detail-block">
               <div class="detail-figure">
                 <canvas
                   id="iodomethane-chart"
@@ -98,11 +119,11 @@
         </div>
 
         <!-- Transition state -->
-        <div class="details-container">
-          <div class="detail-title">Transition state</div>
-          <div class="detail-row">
+        <div class="v-details-container">
+          <div class="v-detail-title">Transition state</div>
+          <div class="v-detail-row">
             <!-- Molecular structure details -->
-            <div class="detail-block">
+            <div class="v-detail-block">
               <div class="detail-figure">
                 <canvas
                   id="transitionstate-chart"
@@ -136,11 +157,11 @@
         </div>
 
         <!-- Products -->
-        <div class="details-container">
-          <div class="detail-title">Products</div>
-          <div class="detail-row">
+        <div class="v-details-container">
+          <div class="v-detail-title">Products</div>
+          <div class="v-detail-row">
             <!-- Molecular structure details -->
-            <div class="detail-block">
+            <div class="v-detail-block">
               <div class="detail-figure">
                 <canvas
                   id="chloromethane-chart"
@@ -178,7 +199,7 @@
             </div>
 
             <!-- Molecular structure details -->
-            <div class="detail-block">
+            <div class="v-detail-block">
               <div class="detail-figure">
                 <canvas
                   id="iodide-chart"
@@ -209,7 +230,7 @@
               </div>
             </div>
           </div>
-          <div class="detail-row">
+          <div class="v-detail-row">
             Note: All the energies here are relative. They do not account for
             actual values.
           </div>

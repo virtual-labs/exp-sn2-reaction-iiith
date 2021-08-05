@@ -1,16 +1,13 @@
-//Your JavaScript goes in here
-
 let reac = [],
   ts = [],
   prod = [];
 
 const initChart = () => {
-  //   const labels = Utils.months({ count: 7 });
   const data = {
     labels: ["Reactants", "Transition State", "Products"],
     datasets: [
       {
-        // label: "My First Dataset",
+        label: "State vs Energy Plot",
         data: [
           reac.reduce((a, b) => a + b, 0),
           ts.reduce((a, b) => a + b, 0),
@@ -27,7 +24,6 @@ const initChart = () => {
     type: "line",
     data: data,
     options: {
-      legend: { display: false },
       scales: {
         xAxes: [
           {
@@ -65,9 +61,6 @@ const updateChart = () => {
 
 const generateMolecule = (container_id, molecule_data) => {
   let width = 150;
-  // if (window.innerWidth < 900) {
-  //   width = window.innerWidth;
-  // }
   let movie = new ChemDoodle.MovieCanvas3D(container_id, width, 150);
 
   movie.addFrame([ChemDoodle.readXYZ(molecule_data)], []);
