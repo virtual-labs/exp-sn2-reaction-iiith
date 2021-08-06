@@ -1,4 +1,6 @@
-let reac = [],
+"use strict";
+
+const reac = [],
   ts = [],
   prod = [];
 
@@ -48,7 +50,7 @@ const initChart = () => {
   });
 };
 
-let chart = initChart();
+const chart = initChart();
 
 const updateChart = () => {
   chart.data.datasets[0].data = [
@@ -60,8 +62,7 @@ const updateChart = () => {
 };
 
 const generateMolecule = (container_id, molecule_data) => {
-  let width = 150;
-  let movie = new ChemDoodle.MovieCanvas3D(container_id, width, 150);
+  const movie = new ChemDoodle.MovieCanvas3D(container_id, 150, 150);
 
   movie.addFrame([ChemDoodle.readXYZ(molecule_data)], []);
 
