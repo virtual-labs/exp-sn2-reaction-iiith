@@ -1,18 +1,76 @@
-[
-{"question":"This is a Sample Question 1?",
-"answers":{
-            "a":"answer1",
-            "b":"answer2",
-            "c":"answer3",
-            "d":"answer4"
-          },
-"correctAnswer":"a"},
-{"question":"This is a Sample Question 2?",
-"answers":{
-            "a":"answer1",
-            "b":"answer2",
-            "c":"answer3",
-            "d":"answer4"
-          },
-"correctAnswer":"c"} 
-]
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "In which solvent SN2 reaction proceeds well?",
+      "answers": {
+        "a": "Ethane",
+        "b": "Water",
+        "c": "Benzene",
+        "d": "DMSO"
+      },
+      "explanations": {
+        "d": "Solvent can have a huge impact on nucleophilicity. Nucleophilicity is highest in polar aprotic solvents, and lower in polar protic solvents. That’s because polar protic solvents (such as water) can hydrogen-bond, and that means that the nucleophile will carry around a little “entourage” of solvent molecules everywhere it goes, making it more bulky. Bulkier nucleophiles slow the rate of SN2 reaction."
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "A transition state in SN2 reaction is a first order saddle point. Which is the correct statement regarding this transition state:",
+      "answers": {
+        "a": "It will have one imaginary frequency in its vibrational modes.",
+        "b": "It has the same geometry like the reactant.",
+        "c": "It has two imaginary frequencies in its vibrational modes.",
+        "d": "It is highly stable."
+      },
+      "explanations": {
+        "a": " first order saddle point is a maxima and by the definition of a maxima, its second derivative will be a negative values.  For potential energy curves, second derivatives provides the force constant, which provides the frequency of the vibrational mode from the formula <img src='./images/posttest/q2/exp.png'>. Negative “k” will give imaginary 𝓥."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Which of the following will have the slowest rate of SN2 reaction?",
+      "answers": {
+        "a": "Methyl bromide",
+        "b": "Ethyl bromide",
+        "c": "Butyl bromide",
+        "d": "Propyl bromide"
+      },
+      "explanations": {
+        "c": "More groups on the C atom attached to bromide will make the attack of the nucleophile difficult and slow the reaction rate"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which statement is true about S N 2 mechanism?",
+      "answers": {
+        "a": "The rate of reaction increases on increasing strength of the nucleophile",
+        "b": "The reaction is faster in polar aprotic solvents",
+        "c": "The rate of reaction increases as the leaving group ability increases",
+        "d": "All of the above"
+      },
+      "explanations": {
+        "d": "Stronger the nucleophile, faster the S N 2 reaction. Polar aprotic solvent solvate cations, makes anionic nucleophile more available for reaction, hence faster reaction. A better leaving group lowers the activation energy increasing rate of S N 2 reaction."
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "A S N 2 reaction involves back side attack of nucleophile at the α-carbon of substrate because:",
+      "answers": {
+        "a": "both nucleophile and leaving group are electron rich, nucleophilic attack occur from most distant position",
+        "b": "there is greater electron density on the back side of substrate",
+        "c": "there is enough physical space in the front side from where leaving group leaves the substrate",
+        "d": "substrate possesses a hole in the backside"
+      },
+      "explanations": {
+        "a": "Both nucleophile and leaving group are electron rich species, nucleophile attacks from backside (most remote position) to have minimum repulsion with leaving group.",
+        "c": "Due to the presence of leaving group on front side there is less physical space for attack of nucleophile."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    }
+  ]
+}
