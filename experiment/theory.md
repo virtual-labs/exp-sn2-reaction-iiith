@@ -1,5 +1,7 @@
-These mechanisms depends on structure of the reactant and nucleiphile, the solvent, temperature. SN2: Let's consider transition state in the reaction between iodomethane and chloride ion.
+These mechanisms depend on the structure of the reactant and nucleophile, the solvent, temperature.
 
-By applying Newton's second law for rotational systems, the equation of motion for the pendulum may be obtained.
+Let's consider the transition state in the reaction between iodomethane and chloride ion.
 
-In the above substitution reaction, the nucleophile Cl- attacks the reactant iodomethane and forms a product chloromethane and leaves I- as leaving group. The intermediatary state where nucleophile Cl- forms bond and I- breaks bond with the iodomethane simultaneously is known as transition state.This mechanism is known as SN2 type and which is stereospecific i.e. Gives a product inverse in configuration with the reactant. Usually aprotic solvents like acetone, DMSO, DMF etc favours this reaction.
+By applying Newton's second law for rotational systems, the equation of motion for the pendulum is obtained.
+
+In the substitution reaction, the nucleophile Cl- attacks the reactant iodomethane and forms product chloromethane and leaves I- as leaving group. The intermediary state where nucleophile Cl- forms a bond and I- breaks the bond with the iodomethane simultaneously is known as the transition state. This mechanism is known as SN2 type, which is stereospecific, i.e., it gives a product inverse in configuration with the reactant. Usually, aprotic solvents like acetone, DMSO, DMF, etc., favor this reaction.

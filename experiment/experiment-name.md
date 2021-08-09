@@ -1,1 +1,1 @@
-## Transition State Calculation for a SN2 reaction
+## Transition State Calculation for SN2 reaction
