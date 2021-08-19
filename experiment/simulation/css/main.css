@@ -43,3 +43,7 @@
 .center-content {
   text-align: center;
 }
+
+.v-button {
+  margin: 0.1em;
+}
