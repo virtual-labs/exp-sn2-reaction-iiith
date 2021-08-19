@@ -1,18 +1,74 @@
-[
-{"question":"This is a Sample Question 1?",
-"answers":{
-            "a":"answer1",
-            "b":"answer2",
-            "c":"answer3",
-            "d":"answer4"
-          },
-"correctAnswer":"a"},
-{"question":"This is a Sample Question 2?",
-"answers":{
-            "a":"answer1",
-            "b":"answer2",
-            "c":"answer3",
-            "d":"answer4"
-          },
-"correctAnswer":"c"} 
-]
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What is the intermediary state in a SN2 chemical reaction?",
+      "answers": {
+        "a": "Nucleophiles",
+        "b": "Transition state",
+        "c": "Catalyst",
+        "d": "Water"
+      },
+      "explanations": {
+        "b": "Transition state is the intermediate state in an SN2 reaction. Nucleophile is one of the reactant, water is solvent and Catalyst speeds up the reaction"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Will the solvent play a role in the reaction mechanism of SN2 reaction?",
+      "answers": {
+        "a": "Yes",
+        "b": "No",
+        "c": "Can't Say"
+      },
+      "explanations": {
+        "a": "Solvents which stabilize the transition state of SN2 reaction will increase the rate of the reaction. All effects which can stabilise and destabilize the transition state affects the rate of the reaction."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "A transition state in the reaction energy curve of a SN2 reaction is known as:",
+      "answers": {
+        "a": "First order saddle point",
+        "b": "Second order saddle point",
+        "c": "Zeroth order saddle point",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "A first order saddle point is defined as a maximum along one coordinate and minimum along all others, which is satisfied by the transition state of SN2 reaction."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Among t-butyl bromide and methyl bromide which will proceed through a SN2 reaction and SN1 reaction?",
+      "answers": {
+        "a": "Both will go through SN1",
+        "b": "Both will go through SN2",
+        "c": "t-butyl bromide will go through SN2 and methyl bromide through SN1.",
+        "d": "t-butyl bromide will go through SN1 and methyl bromide through SN2."
+      },
+      "explanations": {
+        "d": "The fate of the reaction depends on the stability of the intermediary states formed in a reaction. t-butyl bromide will form a tertiary butyl cation as the intermediate molecule which will be stable due to the inductive effects of the attached CH3 groups while this effect is missing in methyl cation. Hence t-butyl bromide will proceed through SN1 and methyl bromide will do so through SN2. "
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Choose the correct statement for the following reaction energy profile: <br> <img src='./images/pretest/q5/ques.png'> ",
+      "answers": {
+        "a": "This is an endothermic reaction.",
+        "b": "This is an exothermic reaction.",
+        "c": "It has two transition states.",
+        "d": "It is a SN1 reaction."
+      },
+      "explanations": {
+        "b": "The thermal nature of the reaction is determined by the energies of the reactants and products. If the E<sub>reactants</sub> > E<sub>products</sub>, then it is a exothermic reaction and vice versa for endo thermic reaction. In the above energy profile diagram, the E<sub>reactants</sub> > E<sub>prodcuts</sub>, and hence is an exothermic reaction."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}

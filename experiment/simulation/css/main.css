@@ -1,1 +1,49 @@
-/* You CSS goes in here */
+.detail-figure {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background-color: black;
+}
+
+.detail-figure > * {
+  flex: 1;
+}
+
+.detail-data {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.4rem;
+}
+
+.detail-data > * {
+  margin: 0.2em;
+}
+
+.detail-blocktitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.detail-data .v-slider {
+  width: 80%;
+}
+
+.detail-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.detail-buttons .v-button {
+  width: 6rem;
+}
+
+.center-content {
+  text-align: center;
+}
+
+.v-button {
+  margin: 0.1em;
+}
