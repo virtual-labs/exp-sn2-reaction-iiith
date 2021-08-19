@@ -44,7 +44,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Which statement is true about S N 2 mechanism?",
+      "question": "Which statement is true about SN2 mechanism?",
       "answers": {
         "a": "The rate of reaction increases on increasing strength of the nucleophile",
         "b": "The reaction is faster in polar aprotic solvents",
@@ -52,13 +52,13 @@
         "d": "All of the above"
       },
       "explanations": {
-        "d": "Stronger the nucleophile, faster the S N 2 reaction. Polar aprotic solvent solvate cations, makes anionic nucleophile more available for reaction, hence faster reaction. A better leaving group lowers the activation energy increasing rate of S N 2 reaction."
+        "d": "Stronger the nucleophile, faster the SN2 reaction. Polar aprotic solvent solvate cations, makes anionic nucleophile more available for reaction, hence faster reaction. A better leaving group lowers the activation energy increasing rate of SN2 reaction."
       },
       "correctAnswer": "d",
       "difficulty": "intermediate"
     },
     {
-      "question": "A S N 2 reaction involves back side attack of nucleophile at the α-carbon of substrate because:",
+      "question": "A SN2 reaction involves back side attack of nucleophile at the α-carbon of substrate because:",
       "answers": {
         "a": "both nucleophile and leaving group are electron rich, nucleophilic attack occur from most distant position",
         "b": "there is greater electron density on the back side of substrate",
