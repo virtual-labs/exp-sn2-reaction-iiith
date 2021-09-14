@@ -1,5 +1,38 @@
 "use strict";
 
+import { instructions } from "./data.js";
+
+let currentInstructionIndex = -1;
+let sleepTime = 3500;
+
+const setInstruction = (index) => {
+  if (index < instructions.length && currentInstructionIndex < index) {
+    currentInstructionIndex = index;
+    document.getElementById("instructions").innerHTML =
+      instructions[currentInstructionIndex].message;
+
+    instructions[currentInstructionIndex].elementId.forEach((id, ind) => {
+      if (ind === 0)
+        document.getElementById(id).scrollIntoView({
+          behavior: "smooth",
+        });
+      document.getElementById(id).classList.add("highlight");
+    });
+    sleep(sleepTime - 600).then(() =>
+      instructions[currentInstructionIndex].elementId.forEach((id) =>
+        document.getElementById(id).classList.remove("highlight")
+      )
+    );
+  }
+};
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+const setMultipleInstructions = (indexes) =>
+  indexes.forEach((val, ind) =>
+    sleep(sleepTime * ind).then(() => setInstruction(val))
+  );
+
 const reac = [],
   ts = [],
   prod = [];
@@ -51,6 +84,7 @@ const initChart = () => {
 };
 
 const chart = initChart();
+setMultipleInstructions([0, 1]);
 
 const updateChart = () => {
   chart.data.datasets[0].data = [
@@ -132,4 +166,20 @@ const iodideEnergy = document.getElementById("iodide-energy");
 updateVal(iodideEnergy, iodideSlider, prod, 1);
 iodideSlider.addEventListener("input", () => {
   updateVal(iodideEnergy, iodideSlider, prod, 1);
+});
+
+[
+  chlorideSlider,
+  iodomethaneSlider,
+  transitionStateSlider,
+  chloromethaneSlider,
+  iodideSlider,
+].forEach((slider) => {
+  slider.addEventListener("mouseup", () =>
+    setMultipleInstructions([2, 3, 4, 5])
+  );
+
+  slider.addEventListener("touchend", () =>
+    setMultipleInstructions([2, 3, 4, 5])
+  );
 });
