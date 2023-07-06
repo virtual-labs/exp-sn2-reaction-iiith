@@ -1,0 +1,8 @@
+
+/home/runner/work/exp-sn2-reaction-iiith/exp-sn2-reaction-iiith/experiment/simulation/js/main.js
+   58:14  warning  'Chart' is not defined       no-undef
+   99:21  warning  'ChemDoodle' is not defined  no-undef
+  101:19  warning  'ChemDoodle' is not defined  no-undef
+
+✖ 3 problems (0 errors, 3 warnings)
+
